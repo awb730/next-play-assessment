@@ -42,6 +42,7 @@ export default function NewTask({ status, onAdd }) {
           type="text"
           value={currTitle}
           onChange={(e) => setCurrTitle(e.target.value)}
+          required
         />
 
         <label htmlFor="description">Description:</label>

@@ -3,6 +3,7 @@ import { supabase } from './lib/supabaseClient';
 import { ensureSession } from './lib/auth'
 import { DndContext, closestCenter, useSensor, useSensors, PointerSensor } from '@dnd-kit/core'
 import './App.css'
+import styles from "./components/Column.module.css"
 import NewTask from './components/NewTask'
 import Column from './components/Column'
 
@@ -90,12 +91,19 @@ export default function App() {
   if (isLoading) {
     return (
       <div className="board">
-        {["To Do", "In Progress", "In Review", "Done"].map(title => (
-          <section key={title}>
-            <h1>{title}</h1>
-            <p>Loading...</p>
-          </section>
-        ))}
+        
+          {["To Do", "In Progress", "In Review", "Done"].map(title => (
+            <section className={styles.column}>
+              <header key={title} className={styles.header}>
+                <h1 className={styles.title}>{title}</h1>
+              </header>
+              <div className={styles.list}>
+                <p>Loading...</p>
+              </div>
+            </section>
+          ))}
+          
+        
       </div>
     )
   }
