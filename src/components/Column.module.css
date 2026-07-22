@@ -1,0 +1,40 @@
+.column {
+  width: 320px;
+  min-height: 700px;
+  padding: 24px 20px;
+  background: #242422;
+  border-top: 1px solid #EDEBE6;
+  transition: background 0.2s ease, border-top-color 0.2s ease;
+}
+
+.column.over {
+  background: #2E2E2B;
+  border-top-color: #EDEBE6;
+  border-top-width: 2px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  border-bottom: 1px solid #3A3A36;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #EDEBE6;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}

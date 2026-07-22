@@ -1,14 +1,10 @@
-section {
-  margin: 30px;
-  padding: 10px;
-  border: 1px solid white;
-  width: 400px;
-  height: 500px;
-}
-
 .board {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: 1px solid white;
+  gap: 24px;
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 60px 40px;
+  box-sizing: border-box;
 }
