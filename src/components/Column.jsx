@@ -3,7 +3,7 @@ import TaskCard from './TaskCard'
 import NewTask from './NewTask'
 import styles from './Column.module.css'
 
-export default function Column({ id, title, status, tasks, onAdd, onDel }) {
+export default function Column({ id, title, status, tasks, onAdd, onDel, teamMembers }) {
   const { setNodeRef, isOver } = useDroppable({ id: status })
   const columnTasks = tasks.filter(t => t.status === status)
 
@@ -18,11 +18,11 @@ export default function Column({ id, title, status, tasks, onAdd, onDel }) {
 
       <div className={styles.list}>
         {columnTasks.map(task => (
-          <TaskCard key={task.id} task={task} onDel={onDel} />
+          <TaskCard key={task.id} task={task} onDel={onDel} teamMembers={teamMembers} />
         ))}
       </div>
 
-      <NewTask status={status} onAdd={onAdd} />
+      <NewTask status={status} onAdd={onAdd} teamMembers={teamMembers} />
     </section>
   )
 }
